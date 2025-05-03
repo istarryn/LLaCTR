@@ -1,0 +1,1 @@
+ 20250503-114047,[command] python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 0 --weight_decay 0.01 --gpu 6,[exp_id] FM_gift,[dataset_id] gift,[train] N.A.,[val] logloss: 0.456171 - AUC: 0.665274,[test] logloss: 0.460218 - AUC: 0.659907

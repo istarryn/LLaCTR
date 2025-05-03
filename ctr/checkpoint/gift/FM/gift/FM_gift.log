@@ -1,0 +1,92 @@
+2025-05-03 11:40:41,331 P1537173 INFO {
+    "batch_size": "4096",
+    "data_format": "csv",
+    "data_root": "../data/gift/",
+    "dataset_id": "gift",
+    "debug": "False",
+    "embedding_dim": "32",
+    "epochs": "100",
+    "every_x_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': 'parent_asin', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'timestamp', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'main_category', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'title', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'average_rating', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'rating_number', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'features', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'description', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'price', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'store', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'categories', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'details', 'type': 'categorical'}]",
+    "gpu": "6",
+    "label_col": "{'dtype': 'float', 'name': 'rating'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "1",
+    "model": "FM",
+    "model_id": "FM_gift",
+    "model_root": "./checkpoint/gift/FM/",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "2",
+    "pickle_feature_encoder": "True",
+    "regularizer": "0",
+    "save_best_only": "True",
+    "seed": "2024",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../data/gift/test.csv",
+    "train_data": "../data/gift/train.csv",
+    "use_hdf5": "True",
+    "valid_data": "../data/gift/valid.csv",
+    "verbose": "1"
+}
+2025-05-03 11:40:41,331 P1537173 INFO Set up feature encoder...
+2025-05-03 11:40:41,331 P1537173 INFO Load feature_encoder from pickle: ../data/gift/gift/feature_encoder.pkl
+2025-05-03 11:40:42,758 P1537173 INFO Total number of parameters: 7777031.
+2025-05-03 11:40:42,759 P1537173 INFO Loading data...
+2025-05-03 11:40:42,763 P1537173 INFO Loading data from h5: ../data/gift/gift/train.h5
+2025-05-03 11:40:42,769 P1537173 INFO Loading data from h5: ../data/gift/gift/valid.h5
+2025-05-03 11:40:42,772 P1537173 INFO Train samples: total/121928, pos/110094, neg/11834, ratio/90.29%
+2025-05-03 11:40:42,772 P1537173 INFO Validation samples: total/15241, pos/12455, neg/2786, ratio/81.72%
+2025-05-03 11:40:42,772 P1537173 INFO Loading train data done.
+2025-05-03 11:40:42,772 P1537173 INFO Loading data...
+2025-05-03 11:40:42,772 P1537173 INFO Loading data from h5: ../data/gift/gift/test.h5
+2025-05-03 11:40:42,774 P1537173 INFO Test samples: total/15241, pos/12391, neg/2850, ratio/81.30%
+2025-05-03 11:40:42,774 P1537173 INFO Loading test data done.
+2025-05-03 11:40:42,784 P1537173 INFO Start training: 30 batches/epoch
+2025-05-03 11:40:42,784 P1537173 INFO ************ Epoch=1 start ************
+2025-05-03 11:40:43,852 P1537173 INFO [Metrics] logloss: 0.457732 - AUC: 0.650177
+2025-05-03 11:40:43,854 P1537173 INFO Intermediate result: {"default": 0.6501769615410884, "logloss": 0.45773213737970087}  (Index 0)
+2025-05-03 11:40:43,855 P1537173 INFO Save best model: monitor(max): 0.650177
+2025-05-03 11:40:43,922 P1537173 INFO --- 30/30 batches finished ---
+2025-05-03 11:40:43,953 P1537173 INFO Train loss: 0.545876
+2025-05-03 11:40:43,953 P1537173 INFO ************ Epoch=1 end ************
+2025-05-03 11:40:44,516 P1537173 INFO [Metrics] logloss: 0.458256 - AUC: 0.655419
+2025-05-03 11:40:44,517 P1537173 INFO Intermediate result: {"default": 0.6554190635462108, "logloss": 0.4582555612506994}  (Index 1)
+2025-05-03 11:40:44,518 P1537173 INFO Save best model: monitor(max): 0.655419
+2025-05-03 11:40:44,638 P1537173 INFO --- 30/30 batches finished ---
+2025-05-03 11:40:44,684 P1537173 INFO Train loss: 0.340885
+2025-05-03 11:40:44,685 P1537173 INFO ************ Epoch=2 end ************
+2025-05-03 11:40:45,320 P1537173 INFO [Metrics] logloss: 0.456171 - AUC: 0.665274
+2025-05-03 11:40:45,321 P1537173 INFO Intermediate result: {"default": 0.6652744135888481, "logloss": 0.4561706090794283}  (Index 2)
+2025-05-03 11:40:45,322 P1537173 INFO Save best model: monitor(max): 0.665274
+2025-05-03 11:40:45,418 P1537173 INFO --- 30/30 batches finished ---
+2025-05-03 11:40:45,460 P1537173 INFO Train loss: 0.325241
+2025-05-03 11:40:45,460 P1537173 INFO ************ Epoch=3 end ************
+2025-05-03 11:40:46,045 P1537173 INFO [Metrics] logloss: 0.457603 - AUC: 0.664749
+2025-05-03 11:40:46,046 P1537173 INFO Intermediate result: {"default": 0.6647487883876572, "logloss": 0.45760301906862283}  (Index 3)
+2025-05-03 11:40:46,047 P1537173 INFO Monitor(max) STOP: 0.664749 !
+2025-05-03 11:40:46,047 P1537173 INFO Reduce learning rate on plateau: 0.000100
+2025-05-03 11:40:46,047 P1537173 INFO --- 30/30 batches finished ---
+2025-05-03 11:40:46,091 P1537173 INFO Train loss: 0.318366
+2025-05-03 11:40:46,091 P1537173 INFO ************ Epoch=4 end ************
+2025-05-03 11:40:46,704 P1537173 INFO [Metrics] logloss: 0.458289 - AUC: 0.664511
+2025-05-03 11:40:46,707 P1537173 INFO Intermediate result: {"default": 0.6645110769192639, "logloss": 0.4582885800425645}  (Index 4)
+2025-05-03 11:40:46,708 P1537173 INFO Monitor(max) STOP: 0.664511 !
+2025-05-03 11:40:46,708 P1537173 INFO Reduce learning rate on plateau: 0.000010
+2025-05-03 11:40:46,708 P1537173 INFO Early stopping at epoch=5
+2025-05-03 11:40:46,708 P1537173 INFO --- 30/30 batches finished ---
+2025-05-03 11:40:46,754 P1537173 INFO Train loss: 0.315608
+2025-05-03 11:40:46,754 P1537173 INFO Training finished.
+2025-05-03 11:40:46,754 P1537173 INFO Load best model: /home/cy/code-my/LLaCTR/ctr/checkpoint/gift/FM/gift/FM_gift_wd0.01_ls0_fm0__model.ckpt
+2025-05-03 11:40:46,796 P1537173 INFO ****** Validation evaluation ******
+2025-05-03 11:40:46,963 P1537173 INFO [Metrics] logloss: 0.456171 - AUC: 0.665274
+2025-05-03 11:40:46,965 P1537173 INFO Intermediate result: {"default": 0.6652744135888481, "logloss": 0.4561706090794283}  (Index 5)
+2025-05-03 11:40:47,085 P1537173 INFO ******** Test evaluation ********
+2025-05-03 11:40:47,236 P1537173 INFO [Metrics] logloss: 0.460218 - AUC: 0.659907
+2025-05-03 11:40:47,238 P1537173 INFO Intermediate result: {"default": 0.6599074030811838, "logloss": 0.4602181300079425}  (Index 6)
+2025-05-03 11:40:47,239 P1537173 INFO Final result: {"default": 0.6599074030811838, "logloss": 0.4602181300079425}
