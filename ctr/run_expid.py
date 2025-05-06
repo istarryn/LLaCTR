@@ -12,13 +12,8 @@ import nni
 import torch
 import time
 """
-python run_expid.py --config ./config_01 --expid FM_magazine --adding_mode 0 --nlp_field 13 --weight_decay 0.01 --lambda_llm 0 --lambda_loss 0 --gpu 0
-python run_expid.py --config ./config_01 --expid FM_game --adding_mode 0 --nlp_field 13 --weight_decay 0.00001 --lambda_llm 0 --lambda_loss 0 --gpu 6
-python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 0 --nlp_field 13 --weight_decay 0.00001 --lambda_llm 0 --lambda_loss 0 --gpu 6
-python run_expid.py --config ./config_01 --expid FM_ml1m --adding_mode 0 --nlp_field 13 --weight_decay 0.00001 --lambda_llm 0 --lambda_loss 0 --gpu 6
-
-python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 1 --nlp_field 13  --llm_emb_path2 "../llm/llm_emb/all/field_base_eos.pt" --lambda_loss 0.05 --lambda_llm 0.01 --weight_decay 0.0001
-
+python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 0 --nlp_field 13 --weight_decay 0.01 --lambda_llm 0 --lambda_loss 0 --gpu 0
+python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 1 --nlp_field 13  --llm_emb_path2 "../llm/llm_emb/gift/field_sl_eos.pt" --lambda_loss 0.05 --lambda_llm 0.01 --weight_decay 0.01
 """
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -109,7 +104,7 @@ if __name__ == '__main__':
         print("my_device =", my_device)
         if args['llm_emb_path2'] != '':
             s1 = time.time()
-            llm_emb2 = torch.load(args['llm_emb_path2'], map_location="cpu").float()
+            llm_emb2 = torch.load(args['llm_emb_path2'], map_location=my_device).float()
             e1 = time.time()
             print(f"llm_emb: {llm_emb2.shape}, {llm_emb2.device}, cost {e1 - s1} s")
 
