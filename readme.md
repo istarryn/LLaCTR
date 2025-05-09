@@ -1,4 +1,4 @@
-### Env
+### Environment
 ```
 conda create -n zctr python=3.10.10
 conda activate zctr
