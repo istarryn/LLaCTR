@@ -1,12 +1,12 @@
-### env
+### Env
 ```
 conda create -n zctr python=3.10.10
 conda activate zctr
 pip install -r requirements.txt
 ```
 
-### dataset
-1. amazon
+### Dataset preprocess
+1. Amazon-2023
 - download: https://amazon-reviews-2023.github.io/
 ```
 cd LLaCTR/data/game
@@ -25,7 +25,7 @@ gunzip Magazine_Subscriptions.jsonl.gz
 python process.py
 ```
 
-2. ml
+2. MovieLens-1M
 - download: https://grouplens.org/datasets/MovieLens/1m/
 ```
 cd LLaCTR/data/ml1m
@@ -33,7 +33,7 @@ unzip ml-1m.zip
 python process.py
 ```
 
-### run backbone
+### Run backbone
 ```
 cd LLaCTR/ctr
 
@@ -44,7 +44,7 @@ python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 0 --weigh
 nnictl create --config config_gift.yml -p 8100
 ```
 
-### run LLaCTR
+### Run LLaCTR
 ```
 cd LLaCTR/data/gift
 
