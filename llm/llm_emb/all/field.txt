@@ -1,0 +1,13 @@
+parent_asin
+user_id
+timestamp
+main_category
+title
+average_rating
+rating_number
+features
+description
+price
+store
+categories
+details
