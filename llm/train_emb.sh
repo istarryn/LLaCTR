@@ -8,7 +8,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch --main_process_port=29501 train_e
     --output_dir './model/gift/sl_1000' \
     --batch_size 128 \
     --micro_batch_size 4 \
-    --num_epochs 3 \
+    --num_epochs 5 \
     --learning_rate 1e-4 \
     --cutoff_len 4096 \
     --lora_r 8 \
