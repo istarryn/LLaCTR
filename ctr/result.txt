@@ -21,13 +21,9 @@ logloss: 0.465853 - AUC: 0.671772
 
 python run_expid.py --config ./config_01 --expid FmFM_gift --adding_mode 0 --weight_decay 0.01  --nlp_field 13 --gpu 1
 logloss: 0.457855 - AUC: 0.674720
-logloss: 0.458104 - AUC: 0.674859 (seed 2025)
-logloss: 0.459886 - AUC: 0.675480 (seed 2023)
 
 python run_expid.py --config ./config_01 --expid FmFM_gift --adding_mode 1 --nlp_field 13  --llm_emb_path2 "../llm/llm_emb/gift/sl_1000/field_sl_eos_3.pt" --lambda_loss 0.01 --lambda_llm 0.1 --weight_decay 0.01 --gpu 1
 logloss: 0.456077 - AUC: 0.676083
-logloss: 0.456020 - AUC: 0.675192 (seed 2025)
-logloss: 0.453805 - AUC: 0.673975 (seed 2023)
 
 python run_expid.py --config ./config_01 --expid FinalMLP_gift --adding_mode 0 --weight_decay 0.01  --nlp_field 13 --gpu 1
 logloss: 0.477398 - AUC: 0.672009
