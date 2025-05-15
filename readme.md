@@ -58,7 +58,7 @@ bash encode.sh
 cd LLaCTR/ctr
 
 - run
-python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 1 --nlp_field 13  --llm_emb_path2 "../llm/llm_emb/gift/sl_1000/field_sl_eos.pt" --lambda_loss 0.5 --lambda_llm 0.01 --weight_decay 0.01 --gpu 0
+python run_expid.py --config ./config_01 --expid FM_gift --adding_mode 1 --nlp_field 13  --llm_emb_path2 "../llm/llm_emb/gift/sl_1000/field_sl_eos_epoch1.pt" --lambda_loss 0.5 --lambda_llm 0.01 --weight_decay 0.01 --gpu 0
 
 - tune
 nnictl create --config config_FM_gift_llm.yml -p 8101
