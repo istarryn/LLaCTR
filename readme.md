@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 ### Dataset preprocess
 1. Amazon-2023
-- download: https://amazon-reviews-2023.github.io/
+- download: [link](https://amazon-reviews-2023.github.io/)
 ```
 cd LLaCTR/data/gift
 gunzip meta_Gift_Cards.jsonl.gz
@@ -26,7 +26,7 @@ python process.py
 ```
 
 2. MovieLens-1M
-- download: https://grouplens.org/datasets/MovieLens/1m/
+- download: [link](https://grouplens.org/datasets/MovieLens/1m/)
 ```
 cd LLaCTR/data/ml1m
 unzip ml-1m.zip
