@@ -8,9 +8,9 @@ searchSpace:
    llm_emb_path2:
       _type: choice
       _value: [
-         "../llm/llm_emb/gift/sl_1000/field_sl_1000_eos_epoch1.pt",
-         "../llm/llm_emb/gift/sl_1000/field_sl_1000_eos_epoch2.pt",
-         "../llm/llm_emb/gift/sl_1000/field_sl_1000_eos_epoch3.pt",
+         "../llm/llm_emb/gift/sl_1000/field_sl_eos_epoch1.pt",
+         "../llm/llm_emb/gift/sl_1000/field_sl_eos_epoch2.pt",
+         "../llm/llm_emb/gift/sl_1000/field_sl_eos_epoch3.pt",
       ]
    lambda_loss:
       _type: choice
